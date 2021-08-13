@@ -53,5 +53,49 @@
     "commit" : "8078ae0b4fa9eef001a9f25480d44c5c1e95a703",
     "line" : 6,
     "diffHunk" : "@@ -1,1 +33,37 @@        createExportStarHelper(moduleExpression: Expression, exportsExpression?: Expression): Expression;\n        // Class Fields Helpers\n        createClassPrivateFieldGetHelper(receiver: Expression, state: Identifier, kind: PrivateIdentifierKind, f: Identifier | undefined): Expression;\n        createClassPrivateFieldSetHelper(receiver: Expression, state: Identifier, value: Expression, kind: PrivateIdentifierKind, f: Identifier | undefined): Expression;\n    }"
+  },
+  {
+    "id" : "bae7fdac-acb8-4130-b2c0-a5ed2d460200",
+    "prId" : 45386,
+    "prUrl" : "https://github.com/microsoft/TypeScript/pull/45386#pullrequestreview-725904094",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "12effc29-31f5-4c5e-9a06-ab5eba1436d0",
+        "parentId" : null,
+        "authorId" : "cbc74313-e7e9-4313-b106-3e17fde5473d",
+        "body" : "I don't know how crazy we want to get with this one but we could also do\r\n\r\n```suggestion\r\n                return to.concat(ar || (from instanceof Array ? from : Array.prototype.slice.call(from)));\r\n```",
+        "createdAt" : "2021-08-09T23:11:29Z",
+        "updatedAt" : "2021-08-09T23:11:30Z",
+        "lastEditedBy" : "cbc74313-e7e9-4313-b106-3e17fde5473d",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7fbe1e45-cbda-461f-9e41-6f0313d4da9e",
+        "parentId" : "12effc29-31f5-4c5e-9a06-ab5eba1436d0",
+        "authorId" : "1eec7f68-de25-4f88-827c-00769c75a2d7",
+        "body" : "I considered that, including a check for `isConcatSpreadable`, but it just became long-winded and the performance benefits seemed negligible.",
+        "createdAt" : "2021-08-10T00:06:08Z",
+        "updatedAt" : "2021-08-10T00:06:09Z",
+        "lastEditedBy" : "1eec7f68-de25-4f88-827c-00769c75a2d7",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b36b2633-42d1-4463-b444-6247697a6c29",
+        "parentId" : "12effc29-31f5-4c5e-9a06-ab5eba1436d0",
+        "authorId" : "1eec7f68-de25-4f88-827c-00769c75a2d7",
+        "body" : "I was originally thinking of doing this:\r\n```ts\r\nvar __spreadArray = (this && this.__spreadArray) || (function () {\r\n    var toString = Object.prototype.toString;\r\n    var slice = Array.prototype.slice;\r\n    var isArray = typeof Array.isArray === \"function\" ? Array.isArray : function (obj) { return toString.call(obj) === \"[object Array]\"; };\r\n    var isConcatSpreadable = typeof Symbol === \"function\" && Symbol.isConcatSpreadable;\r\n    function canConcat(obj) { return isArray(obj) || isConcatSpreadable && obj[isConcatSpreadable]; }\r\n    return function (to, from, pack) {\r\n        if (pack || arguments.length === 2) {\r\n            for (var i = 0, l = from.length, ar; i < l; i++) {\r\n                if (ar || !(i in from)) {\r\n                    if (!ar) ar = slice.call(from, 0, i);\r\n                    ar[i] = from[i];\r\n                }\r\n            }\r\n            if (ar) from = ar;\r\n        }\r\n        return to.concat(canConcat(from) ? from : slice.call(from));\r\n    }\r\n})();\r\n```\r\n",
+        "createdAt" : "2021-08-10T00:07:24Z",
+        "updatedAt" : "2021-08-10T00:07:41Z",
+        "lastEditedBy" : "1eec7f68-de25-4f88-827c-00769c75a2d7",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7c7e0eb2fffe06b5eea11fb0eb36b20f08476c25",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +648,652 @@                    }\n                }\n                return to.concat(ar || Array.prototype.slice.call(from));\n            };`\n    };"
   }
 ]
