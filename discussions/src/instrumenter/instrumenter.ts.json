@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "4e8844f0-301e-45c3-b888-7d9c93c0785f",
+    "prId" : 45383,
+    "prUrl" : "https://github.com/microsoft/TypeScript/pull/45383#pullrequestreview-725798991",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "af100772-6bd0-4c5e-a4d1-e362a8e278bb",
+        "parentId" : null,
+        "authorId" : "2b0d3f17-3eae-4173-ad8a-73c9440bf608",
+        "body" : "this is mostly just refactoring to use fs.*sync, which is way easier to read -- the normal async versions are overkill for a simple rewrite script.",
+        "createdAt" : "2021-08-09T20:51:22Z",
+        "updatedAt" : "2021-08-09T20:53:12Z",
+        "lastEditedBy" : "2b0d3f17-3eae-4173-ad8a-73c9440bf608",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3af56b2782d53313745236b090176e8f8298c868",
+    "line" : 34,
+    "diffHunk" : "@@ -1,1 +16,20 @@function instrument(tscPath: string, prepareCode: string, cleanupCode = \"\") {\n    const bak = `${tscPath}.bak`;\n    const filename = fs.existsSync(bak) ? bak : tscPath;\n    const tscContent = fs.readFileSync(filename, \"utf-8\");\n    fs.writeFileSync(bak, tscContent);"
+  },
+  {
+    "id" : "afba4fcc-89b3-4dd8-90ef-19a53def1064",
+    "prId" : 45383,
+    "prUrl" : "https://github.com/microsoft/TypeScript/pull/45383#pullrequestreview-725798991",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "be1463fe-81b4-4345-b0fe-d84eadc4ad4d",
+        "parentId" : null,
+        "authorId" : "2b0d3f17-3eae-4173-ad8a-73c9440bf608",
+        "body" : "the text to search for has changed slightly, and is the only real change in this file",
+        "createdAt" : "2021-08-09T20:51:52Z",
+        "updatedAt" : "2021-08-09T20:53:12Z",
+        "lastEditedBy" : "2b0d3f17-3eae-4173-ad8a-73c9440bf608",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3af56b2782d53313745236b090176e8f8298c868",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +20,24 @@    fs.writeFileSync(bak, tscContent);\n    const loggerContent = fs.readFileSync(path.resolve(path.dirname(tscPath) + \"/loggedIO.js\"), \"utf-8\");\n    const invocationLine = \"ts.executeCommandLine(ts.sys, ts.noop, ts.sys.args);\";\n    const index1 = tscContent.indexOf(invocationLine);\n    if (index1 < 0) {"
+  }
+]

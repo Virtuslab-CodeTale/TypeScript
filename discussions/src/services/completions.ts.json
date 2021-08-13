@@ -2198,5 +2198,27 @@
     "commit" : "337a2cbea368792804c9e798615073a3ebe54503",
     "line" : 11,
     "diffHunk" : "@@ -1,1 +717,721 @@            case ImportKind.CommonJS: return { replacementSpan, insertText: `import ${name}${tabStop} = require(${quotedModuleSpecifier})${suffix}` };\n            case ImportKind.Default: return { replacementSpan, insertText: `import ${name}${tabStop} from ${quotedModuleSpecifier}${suffix}` };\n            case ImportKind.Namespace: return { replacementSpan, insertText: `import * as ${name} from ${quotedModuleSpecifier}${suffix}` };\n            case ImportKind.Named: return { replacementSpan, insertText: `import { ${name}${tabStop} } from ${quotedModuleSpecifier}${suffix}` };\n        }"
+  },
+  {
+    "id" : "d0eddcbc-5677-4222-94e2-170c36f23064",
+    "prId" : 45128,
+    "prUrl" : "https://github.com/microsoft/TypeScript/pull/45128#pullrequestreview-711057141",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1495bdd5-a833-4a56-8696-a90ab222f4d5",
+        "parentId" : null,
+        "authorId" : "7b7aae27-4774-41a7-bce2-94c871708547",
+        "body" : "Drive by fix: tabstop is unnecessary in this snippet because you can’t add a comma and import more things after `import * as whatever`",
+        "createdAt" : "2021-07-20T20:55:00Z",
+        "updatedAt" : "2021-07-20T20:55:01Z",
+        "lastEditedBy" : "7b7aae27-4774-41a7-bce2-94c871708547",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "337a2cbea368792804c9e798615073a3ebe54503",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +717,721 @@            case ImportKind.CommonJS: return { replacementSpan, insertText: `import ${name}${tabStop} = require(${quotedModuleSpecifier})${suffix}` };\n            case ImportKind.Default: return { replacementSpan, insertText: `import ${name}${tabStop} from ${quotedModuleSpecifier}${suffix}` };\n            case ImportKind.Namespace: return { replacementSpan, insertText: `import * as ${name} from ${quotedModuleSpecifier}${suffix}` };\n            case ImportKind.Named: return { replacementSpan, insertText: `import { ${name}${tabStop} } from ${quotedModuleSpecifier}${suffix}` };\n        }"
   }
 ]

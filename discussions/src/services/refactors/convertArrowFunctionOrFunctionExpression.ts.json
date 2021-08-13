@@ -152,5 +152,38 @@
     "commit" : "31f00f630330e828e77e101bf5a82518d28c23d9",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +142,146 @@        const typeChecker = program.getTypeChecker();\n        const func = tryGetFunctionFromVariableDeclaration(file, typeChecker, token.parent);\n        if (func && !containingThis(func.body) && !typeChecker.containsArgumentsReference(func)) {\n            return { selectedVariableDeclaration: true, func };\n        }"
+  },
+  {
+    "id" : "ae84569c-938e-40c9-978e-74a7058e47df",
+    "prId" : 45116,
+    "prUrl" : "https://github.com/microsoft/TypeScript/pull/45116#pullrequestreview-721523347",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2bda63dc-f493-46b6-9f3c-8702e497c148",
+        "parentId" : null,
+        "authorId" : "cbc74313-e7e9-4313-b106-3e17fde5473d",
+        "body" : "Do these walk the function twice? Probably not a huge deal right now, but it would be smarter to use our find-all-references logic long-term.",
+        "createdAt" : "2021-08-03T18:31:41Z",
+        "updatedAt" : "2021-08-03T18:31:41Z",
+        "lastEditedBy" : "cbc74313-e7e9-4313-b106-3e17fde5473d",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "50664ffc-61bd-40e1-a963-18c5d7c59c5c",
+        "parentId" : "2bda63dc-f493-46b6-9f3c-8702e497c148",
+        "authorId" : "abcb489c-ecaa-43d7-a864-2305b3feb38c",
+        "body" : "Oke. Will check it later.",
+        "createdAt" : "2021-08-03T18:33:57Z",
+        "updatedAt" : "2021-08-03T18:33:57Z",
+        "lastEditedBy" : "abcb489c-ecaa-43d7-a864-2305b3feb38c",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "31f00f630330e828e77e101bf5a82518d28c23d9",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +142,146 @@        const typeChecker = program.getTypeChecker();\n        const func = tryGetFunctionFromVariableDeclaration(file, typeChecker, token.parent);\n        if (func && !containingThis(func.body) && !typeChecker.containsArgumentsReference(func)) {\n            return { selectedVariableDeclaration: true, func };\n        }"
   }
 ]

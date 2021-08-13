@@ -1098,5 +1098,27 @@
     "commit" : "0f8759023f5794af17044c9b6e4db22261e29ff2",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +759,763 @@            // for class and function declarations, use the `default` modifier\n            // when the declaration is unnamed.\n            const defaultModifier = node.modifiers && find(node.modifiers, isDefaultModifier);\n            if (defaultModifier) return defaultModifier;\n        }"
+  },
+  {
+    "id" : "68565e72-e20f-429a-bffd-9ee5951b80ac",
+    "prId" : 44936,
+    "prUrl" : "https://github.com/microsoft/TypeScript/pull/44936#pullrequestreview-724733980",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "5439a595-bf73-4f01-8f64-1f265f0188bf",
+        "parentId" : null,
+        "authorId" : "cbc74313-e7e9-4313-b106-3e17fde5473d",
+        "body" : "Could also do\r\n\r\n```suggestion\r\n            const defaultModifier = forEach(node.modifiers, isDefaultModifier);\r\n```\r\n\r\nor\r\n\r\n```suggestion\r\n            const defaultModifier = node.modifiers?.find(isDefaultModifier);\r\n```",
+        "createdAt" : "2021-08-06T21:58:05Z",
+        "updatedAt" : "2021-08-06T21:58:06Z",
+        "lastEditedBy" : "cbc74313-e7e9-4313-b106-3e17fde5473d",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0f8759023f5794af17044c9b6e4db22261e29ff2",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +759,763 @@            // for class and function declarations, use the `default` modifier\n            // when the declaration is unnamed.\n            const defaultModifier = node.modifiers && find(node.modifiers, isDefaultModifier);\n            if (defaultModifier) return defaultModifier;\n        }"
   }
 ]

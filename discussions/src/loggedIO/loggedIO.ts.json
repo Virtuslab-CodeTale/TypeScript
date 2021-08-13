@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "2953546b-bf16-44b4-905f-16fee71ca4e4",
+    "prId" : 45383,
+    "prUrl" : "https://github.com/microsoft/TypeScript/pull/45383#pullrequestreview-725798991",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ba0c3d17-5a5e-4d25-9935-99ee9e848aab",
+        "parentId" : null,
+        "authorId" : "2b0d3f17-3eae-4173-ad8a-73c9440bf608",
+        "body" : "I can revert this if anybody cares, it's an egregious overload replaced with an egregious variadic parameter",
+        "createdAt" : "2021-08-09T20:52:49Z",
+        "updatedAt" : "2021-08-09T20:53:12Z",
+        "lastEditedBy" : "2b0d3f17-3eae-4173-ad8a-73c9440bf608",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3af56b2782d53313745236b090176e8f8298c868",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +206,210 @@    }\n\n    export function initWrapper(...[wrapper, underlying]: [PlaybackSystem, ts.System] | [PlaybackIO, Harness.IO]): void {\n        ts.forEach(Object.keys(underlying), prop => {\n            (wrapper as any)[prop] = (underlying as any)[prop];"
+  }
+]
