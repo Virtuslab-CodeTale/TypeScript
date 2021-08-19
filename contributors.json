@@ -8310,6 +8310,21 @@
     "updatedAt" : "2021-07-27T18:59:18.222521+02:00"
   },
   {
+    "id" : "4fd9f582-f2d9-4fa7-9cf1-42844758062c",
+    "remoteIds" : [
+      {
+        "id" : "kasprzyckit",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "Tomasz Kasprzycki",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/22435324?u=f5a65e4fc6aae938a821539961b937ba03bb6483&v=4",
+    "altName" : "kasprzyckit",
+    "email" : null,
+    "updatedAt" : "2021-08-19T13:13:03.190561+02:00"
+  },
+  {
     "id" : "4fe07f9f-2018-4a29-969c-e58ed20233c7",
     "remoteIds" : [
       {
