@@ -7980,6 +7980,21 @@
     "updatedAt" : "2021-07-27T20:26:54.982641+02:00"
   },
   {
+    "id" : "44a6fe85-8675-4a0f-b923-c333c7a9e16e",
+    "remoteIds" : [
+      {
+        "id" : "softwareCobbler",
+        "url" : "github.com",
+        "provider" : "GitHub"
+      }
+    ],
+    "name" : "David Rogers",
+    "avatarUrl" : "https://avatars.githubusercontent.com/u/18746216?v=4",
+    "altName" : "softwareCobbler",
+    "email" : null,
+    "updatedAt" : "2021-08-23T14:43:56.817+02:00"
+  },
+  {
     "id" : "44b718c7-2fda-4071-83e5-689d3161c8ff",
     "remoteIds" : [
       {
